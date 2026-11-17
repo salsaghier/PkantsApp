@@ -1,4 +1,4 @@
-# <img width="100" height="100" alt="Mint Aloe Mascot in Terracotta Pot" src="https://github.com/user-attachments/assets/1f3b50fd-b3a7-40df-b0a4-eb38d09942db" /> Planto 
+# <img width="100" height="100" alt="Mint Aloe Mascot in Terracotta Pot" src="https://github.com/user-attachments/assets/1f3b50fd-b3a7-40df-b0a4-eb38d09942db" /> Planto 🌱
 Your plants, cared for in one place.
 
 ## Our Goal
