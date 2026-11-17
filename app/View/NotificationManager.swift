@@ -19,14 +19,18 @@ enum NotificationManager {
 
             // محتوى الإشعار
             let content = UNMutableNotificationContent()
-            content.title = "Time to water your plant"
-            content.body = "Your \(plant.name) is waiting for a sip!"
+            
+            content.title = "Planto"
+            content.body = "Hey! let's water your plant"
             content.sound = .default
 
             // نحول الأيام إلى ثوانٍ
-            let days = plant.wateringIntervalDays.rawValue
-            let seconds = Double(days) * 24 * 60 * 60
+            //let days = plant.wateringIntervalDays.rawValue
+           // let seconds = Double(days) * 24 * 60 * 60
+            // للتجربة: يتكرر كل دقيقة
+            let seconds: Double = 60
 
+                        
             let trigger = UNTimeIntervalNotificationTrigger(
                 timeInterval: seconds,
                 repeats: true

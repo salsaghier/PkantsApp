@@ -150,6 +150,10 @@ class PlantsViewModel {
             }
         }
     }
+    // تكون true إذا كل النباتات عليها صح
+    var allCompleted: Bool {
+        !plants.isEmpty && completedCount == plants.count
+    }
 
 } // نهاية PlantsViewModel
     

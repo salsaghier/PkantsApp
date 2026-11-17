@@ -24,20 +24,57 @@ struct ContentView: View {
                     .overlay(.gray)
 
                 if viewModel.plants.isEmpty {
-                    Spacer()
+                    
+                        // ما فيه نباتات
+                        Spacer()
 
-                    Text("No reminders set yet..")
-                        .foregroundStyle(.gray)
+                        Text("No reminders set yet..")
+                            .foregroundStyle(.gray)
 
-                    Spacer()
-                } else {
+                        Spacer()
+
+                    } else if viewModel.allCompleted {
+                        // كل النباتات عليها صح
+                        Spacer()
+
+                        VStack(spacing: 20) {
+                            ZStack {
+                                Circle()
+                                    .fill(
+                                        Color(
+                                            red: 0.04,
+                                            green: 0.04,
+                                            blue: 0.05
+                                        )
+                                    )
+                                    .frame(width: 240, height: 240)
+
+                                Image("plantss")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 210, height: 230)
+                            }
+
+                            Text("All Done! 🎉")
+                                .font(.title)
+                                .bold()
+                                .foregroundStyle(.white)
+
+                            Text("All Reminders Completed")
+                                .foregroundStyle(.gray)
+                        }
+
+                        Spacer()
+
+                    } else {
+                        // هنا يبقى شريط التقدم وقائمة النباتات عندك
                     // النص وشريط التقدم
                     VStack(spacing: 12) {
                         if viewModel.completedCount == 0 {
-                            Text("Your plants are waiting for a sip")
+                            Text("Your plants are waiting for a sip 💦")
                         } else {
                             Text(
-                                "\(viewModel.completedCount) of your plants feel loved today"
+                                "\(viewModel.completedCount) of your plants feel loved today✨"
                             )
                         }
 
